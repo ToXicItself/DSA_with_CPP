@@ -1,27 +1,26 @@
-// #include<iostream>
-// using namespace std;
-// int main(){
-//     int i=0;
-//     while (i!=5)
-//     {
-//         cout<<"*****"<<endl;
-//         i++;
-//     }
+#include <iostream>
+using namespace std;
 
-// }
+void pattern1(int n)
+{
+    int i = 0;
+    while (i != n)
+    {
+        cout << "*****" << endl;
+        i++;
+    }
+}
 
-// #include<iostream>
-// using namespace std;
-// int main(){
-//     string j="";
-//     for (int i = 0; i < 5; i++)
-//     {
-//         string f= j+"*";
-//         cout<<f<<endl;
-//          j=f;
-//     }
-
-// }
+void pattern2()
+{
+    string j = "";
+    for (int i = 0; i < 5; i++)
+    {
+        string f = j + "*";
+        cout << f << endl;
+        j = f;
+    }
+}
 
 // #include<iostream>
 // using namespace std;
@@ -52,9 +51,6 @@
 //     }
 // }
 
-#include <iostream>
-using namespace std;
-
 void pattern5(int n)
 {
     for (int i = 0; i < n; i++)
@@ -79,17 +75,44 @@ void pattern6(int n)
     }
 }
 
-void pattern7(int n)
+void pattern7()
 {
-    for (int i = 0; i<n; i++)
+    for (int i = 0; i < 5; i++)
     {
-        for (int j = 0; j<=i; j++)
+        for (int j = 4; j >i; j--)
         {
-            cout<<" ";
+            cout << " ";
         }
-        cout <<"*";
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            cout << "*";
+        }
+        for (int j = 4; j >i; j--)
+        {
+            cout << " ";
+        }
         cout<<endl;
     }
+}
+
+void pattern8(){
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j<i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j<9-(2*i); j++)
+        {
+            cout << "*";
+        }
+        for (int j = 0; j<i; j++)
+        {
+            cout << " ";
+        }
+        cout<<endl;
+    }
+
 }
 int main()
 {
@@ -97,6 +120,7 @@ int main()
     cin >> n;
     // pattern5(n);
     // pattern6(n);
-     pattern7(n);
-}
+    // pattern7();
+    pattern8();
 
+}
