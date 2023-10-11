@@ -243,9 +243,9 @@ void pattern15()
     }
 }
 
-void pattern16()
+void pattern16(int n)
 {
-    for (int i = 1; i <= 5; i++)
+    for (int i = 1; i <= n; i++)
     {
         for (int j = 0; j < i; j++)
         {
@@ -256,8 +256,8 @@ void pattern16()
 }
 int main()
 {
-    // int n;
-    // cin >> n;
+    int n;
+    cin >> n;
     // pattern5(n);
     // pattern6(n);
     // pattern7();
@@ -268,7 +268,7 @@ int main()
     // pattern12();
     // pattern13();
     //  pattern14();
-    // pattern15();
-    // pattern16();
+    pattern15();
+    // pattern16(n);
     return 0;
 }
